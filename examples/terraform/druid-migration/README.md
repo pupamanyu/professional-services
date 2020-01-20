@@ -1,6 +1,6 @@
 # Launch Druid on Compute Engine using Terraform
 
-This can be used to provision Druid Cluster on GCP using Terraform
+This can be used to provision Druid Cluster on GCP using Terraform.
 
 ## Resources to launch
 
