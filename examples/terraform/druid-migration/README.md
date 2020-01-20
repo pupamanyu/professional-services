@@ -16,7 +16,7 @@ This can be used to provision Druid Cluster on GCP using Terraform.
 
 
 ## Architectural diagram
-![Druid Architecture](https://storage.googleapis.com/pso-druid-migration/Druidarchitecture.png "Logo Title Text 1")
+![Druid Architecture](https://storage.googleapis.com/pso-druid-migration/Druidarchitecture.png "Druid Architecture")
 
 ## setup the environment
 
@@ -27,9 +27,9 @@ cd druid_terraform/
 ```
 2. [Create a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account) and grant the following roles to the service account by following these [instructions](https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource)
 
-    * Service networking admin
+    * roles/servicenetworking.networksAdmin
 
-    * iam.serviceAccountUser
+    * roles/iam.serviceAccountUser
 
     * roles/compute.admin
 
@@ -40,10 +40,6 @@ cd druid_terraform/
     * roles/cloudsql.admin
 
     * roles/dataproc.editor
-
-## Required Inputs
-
-The following input variables are required:
 
 ## Optional Inputs
 
@@ -591,7 +587,7 @@ Description: SQL instance random generated password
 
 * Terraform v0.11.11
 
-* Modify fields with ‘< >’ in variables.tf with suitable input for the cluster
+* fields with ‘< >’ in variables.tf with suitable input for the cluster
 
 * Upload the Service Account key file  on terraform machine, the service account should have Project editor role, and Service Networking admin role.
 
