@@ -1,4 +1,5 @@
 resource "google_dataproc_cluster" "ephemeral-dataproc" {
+  depends_on = ["cloudsql"]
   name   = "${var.dataproc_cluster_name}"
   region = "${var.region}"
 
